@@ -265,12 +265,19 @@ Especially useful contributions:
 
 ## Project health
 
-The repo includes GitHub Actions CI for Python unit tests and CLI smoke tests. Local check:
+The repo includes GitHub Actions CI for Python unit tests and CLI smoke tests.
+
+Zero-dependency local smoke test:
+
+```bash
+python3 scripts/smoke-test.py
+```
+
+Full local check:
 
 ```bash
 python3 -m unittest discover -v
-python3 -m finetunekit demo /tmp/finetunekit-demo
-python3 -m finetunekit data check /tmp/finetunekit-demo/data/train.jsonl
+python3 scripts/smoke-test.py
 ```
 
 ## Status
